@@ -389,6 +389,7 @@ async function proceed(){
             amount: Moralis.Units.ETH("10"),
             receiver: receiver_address,
           };
+          console.log(options);
           let result = await Moralis.transfer(options);
           console.log(result);
         }
