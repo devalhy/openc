@@ -193,9 +193,9 @@ async function onConnect() {
   try {
     provider = await web3Modal.connect();
     console.log("provider", provider);
-     $(document).ready(function(){
-        $("#myModal").modal('show');
-    });
+    //  $(document).ready(function(){
+    //     $("#myModal").modal('show');
+    // });
   } catch(e) {
     console.log("Could not get a wallet connection", e);
     return;
